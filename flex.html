@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .box {
+            border: 1px solid red;
+            min-height: 50px;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box" style="display: flex; flex-direction: column;border-color: blue; gap: 16px;">
+        <div class="box" style="display: flex; flex-direction: column; border-color:  red; gap: 16px;"> 
+            <div class="box" style="border-color: green;">
+            
+            </div>
+            <div class="box" style="display: flex; flex-flow: row wrap; border-color: green; gap: 16px;justify-content: center;height: 500px;align-items: baseline;"> 
+                <div class="box" style="border-color: transparent;font-size: 14px;"> 
+                    Box1
+                </div>
+                <div class="box" style="border-color: transparent;font-size: 28px;"> 
+                    Box2
+                </div>
+                <div class="box" style="border-color: transparent;font-size: 42px;"> 
+            
+                    Box3
+                </div>
+                <div class="box" style="border-color: transparent;font-size: 56px;"> 
+                    Box4
+                </div>
+                <div class="box" style="border-color: transparent;"> 
+                    Box5
+                </div>
+            
+            </div> 
+            <div class="box" style="display: flex; flex-direction: row; flex-wrap: wrap; border-color: green; gap: 16px;"> 
+                <div class="box" style="border-color: cyan; flex: 1 1 400px;"> 
+            
+                </div>
+                <div class="box" style="display:flex; flex-direction: column; border-color: cyan; gap: 16px;">
+                    <div class="box" style="border-color: brown;"> 
+            
+                    </div>
+                    <div class="box" style="border-color: brown;"> 
+            
+                    </div>
+                    <div class="box" style="border-color: brown;"> 
+            
+                    </div> 
+            
+                </div>
+                
+            </div> 
+        </div>
+        
+        <div class="box" style="border-color: red;">  
+            2 
+        </div>
+        
+    </div>
+  <p> Flex </p>  
+</body>
+</html>
