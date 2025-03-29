@@ -4,22 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <style>
+        input {
+            padding: 10px 14px;
+            border-radius: 200rem;
+
+        }
+
+
+        .input-section {
+            display: flex;
+            flex-direction: column;
+            align-items: column;
+            width: 300px;
+        }
+
+        .input-section:hover {
+            background-color: blueviolet;
+        }
+
+        input:focus {
+            outline-color: red;
+            background-color: yellow;
+        }
+
+        input:disabled {
+            background-color: aqua;
+        }
+
+    </style>
 </head>
 <body>
-   <form>
+   <form id="registration-form" method="post" action="results.html">
 
-    <div>
+    <div class="input-section">
 
     <label for="Nama">Nama</label>
-    <input id="Nama">
+    <input id="Nama" name="Nama" maxlength="10" disabled>
 
     </div>
 
-    <div>
+    <div class="input-section">
         <label for="Umur">Umur</label>
-        <input id="Umur" type="number" min="0">
+        <input id="Umur" name="Umur" type="number" min="0" required>
     </div>
     <button type="submit">Submit</button>
-   </form> 
+   </form>  
 </body>
 </html>
