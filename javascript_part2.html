@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Part 2</title>
+
+    <style>
+
+        .red {
+            color: red;
+            font-size: 125px;
+            font-family: '72 Brand Light';
+        }
+
+        .blue {
+            color: blue;
+            font-size: 150px;
+            font-family: '72 Brand Light';
+        }
+
+        .children {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div></div>
+        <nav></nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="children red" id="banner"></div>
+            
+            <button id="greeting" onclick="javascript: alert('Hello button')">Inline</button>
+            <button onclick="MyFunction()">Function Reference</button>
+            <button id="greeting2">Event based on Elemet Query</button>
+
+            <div class="children" id="main-product"></div>
+        </div>
+        <div class="wrapper">
+            <input type="text" name="animal">
+        </div>
+        <div class="wrapper" id="pricing">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+        </div>
+    </main>
+    <footer>
+        <div id="sitemap"></div>
+        <div id="call-to-action"></div>
+    </footer>
+    
+    <script>
+        //Element Query
+        const element = document.getElementById('greeting');
+
+        console.dir(element);
+        console.log(element);
+
+        //Event based on function reference
+        function MyFunction() {
+            alert("Hello Function");
+        }
+
+        //Event based on element query
+        const element2 = document.getElementById('greeting2');
+        element2.onclick = function () {
+            alert('Hello Element Query');
+        }
+
+        //Event based on listener
+        const listener = document.addEventListener('click', function() {
+            console.log("Click Required");
+        })
+
+        //Event based on listener of specific element
+        const element3 = document.getElementById("pricing");
+        const MyEar = element3.addEventListener('click', function() {
+            console.log("Only element3 been clicked");
+        })
+
+        //Object.entries(element).forEach(item => {
+        //   console.log(item);
+        //})
+    </script>
+    <script src="javascript.js"></script>
+</body>
+</html>
