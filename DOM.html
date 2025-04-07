@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM)</title>
+</head>
+<body>
+    <div id="greeting">
+        hello world
+    </div>
+    <div>
+        hello dunia
+    </div>
+    <div>
+        hello......
+    </div>
+
+    Senarai Nama
+    <div id="senaraiNama"></div>
+
+    Isi Maklumat
+    <input type="text" onchange="updatename(this)" id="input"/>
+
+    <button id="clickHere" onclick="alert('You already click!')">
+        Click Here
+    </button>
+    
+</body>
+
+<script>
+    function updatename(element){
+        
+        document.getElementById('greeting').innerHTML = `hello ${element.value}`   
+    }
+    const senaraiNama = ['Abu','Amad', 'Ali']
+
+    const listSenarai = document.getElementById('senaraiNama')
+    const listNama = senaraiNama.map((nama) => `<li>${nama}</li>`)
+
+    listSenarai.innerHTML = listNama
+
+    const senaraiWarna = ['red','blue','green','yellow','black']
+
+    function tukarWarna(element, index=0){
+        element.style.color = senaraiWarna[index]
+
+        //setTimeout
+        setTimeout(() => {
+            index++
+            if(index > 4){
+                index = 0
+            }
+            //recurring function
+            tukarWarna(document.getElementById('greeting'),index)
+        }, 1000)
+        
+    }
+
+    tukarWarna(document.getElementById('greeting'))
+
+    document.getElementById('greeting').innerHTML = 'hello my world'
+
+
+</script>
+</html>
